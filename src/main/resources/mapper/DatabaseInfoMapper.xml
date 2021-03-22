@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.liuzw.generate.mapper.DatabaseInfoMapper">
+<mapper namespace="com.dafeng.generate.mapper.DatabaseInfoMapper">
 
-    <resultMap id="BaseResultMap" type="com.liuzw.generate.bean.DatabaseInfoBean">
+    <resultMap id="BaseResultMap" type="com.dafeng.generate.bean.DatabaseInfoBean">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="db_remark" jdbcType="VARCHAR" property="name"/>
         <result column="db_driver" jdbcType="VARCHAR" property="dbDriver"/>

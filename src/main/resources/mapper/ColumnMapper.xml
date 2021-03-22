@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.liuzw.generate.mapper.ColumnMapper">
+<mapper namespace="com.dafeng.generate.mapper.ColumnMapper">
 
-    <resultMap id="BaseResultMap" type="com.liuzw.generate.bean.ColumnBean">
+    <resultMap id="BaseResultMap" type="com.dafeng.generate.bean.ColumnBean">
         <result column="column_name" jdbcType="VARCHAR" property="columnName" />
         <result column="column_comment" jdbcType="VARCHAR" property="columnComment" />
         <result column="column_type" jdbcType="VARCHAR" property="columnType" />
@@ -36,7 +36,7 @@
         order by table_name
     </select>
 
-    <select id="getList" resultType="com.liuzw.generate.bean.TableBean">
+    <select id="getList" resultType="com.dafeng.generate.bean.TableBean">
         select table_name tableName, engine, table_comment tableComment, create_time createTime
         from information_schema.tables
         where table_schema = (select database())
@@ -46,7 +46,7 @@
         order by create_time desc
     </select>
 
-    <select id="getTableInfoByTableName" resultType="com.liuzw.generate.bean.TableBean">
+    <select id="getTableInfoByTableName" resultType="com.dafeng.generate.bean.TableBean">
         select table_name tableName,table_comment tableComment
         from information_schema.tables
         where table_schema = (select database())
